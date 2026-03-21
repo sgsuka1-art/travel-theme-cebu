@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宿霧 5 天海洋探索｜旅行主題</title>
+  <style>
+    :root {
+      --sky:#6FB6E9; --coral:#FF7F50; --cream:#FAF6EF; --forest:#2F6B4F;
+      --ink:#1F2937; --muted:#6B7280; --card:#FFFFFF;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font:16px/1.7 "Noto Sans TC","Inter","Segoe UI",sans-serif; color:var(--ink); background:var(--cream); }
+    .hero {
+      min-height:46vh; padding:56px 20px; color:#fff;
+      background:linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.28)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+      display:flex; align-items:flex-end;
+    }
+    .hero h1 { font-family:"Nunito","Noto Sans TC","Segoe UI",sans-serif; font-size:clamp(30px,5vw,54px); margin:0 0 8px; }
+    .hero p { margin:0; font-size:18px; opacity:.95; }
+    .container { max-width:1120px; margin:26px auto 56px; padding:0 16px; }
+    .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 24px; }
+    .tab { border:0; border-radius:999px; padding:10px 16px; background:#e5edf5; cursor:pointer; font-weight:600; }
+    .tab.active { background:var(--sky); color:#fff; }
+    .panel { display:none; }
+    .panel.active { display:block; }
+    .card { background:var(--card); border-radius:16px; padding:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); margin-bottom:14px; }
+    .grid { display:grid; gap:14px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .timeline { border-left:3px solid var(--sky); margin-left:8px; padding-left:14px; }
+    details { margin-bottom:10px; border:1px solid #e5e7eb; border-radius:12px; padding:10px 12px; }
+    details summary { cursor:pointer; font-weight:700; }
+    .meta { color:var(--muted); font-size:14px; margin-top:2px; }
+    .rating { color:#f59e0b; font-weight:700; }
+    .tag { display:inline-block; border-radius:999px; background:#eef8f2; color:var(--forest); padding:4px 10px; font-size:12px; margin-right:6px; }
+    .callout { border-left:4px solid var(--coral); background:#fff7f2; border-radius:10px; padding:10px 12px; margin:10px 0; }
+    .map { border:2px dashed #cbd5e1; border-radius:16px; background:#fff; overflow:hidden; min-height:220px; }
+    .map iframe { width:100%; min-height:220px; border:0; }
+    ul { margin:8px 0 0 18px; }
+    @media (max-width:900px){ .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>宿霧 5 天海洋探索</h1>
+      <p>鯨鯊共游 × 海洋公園 × 市區文化 × 自由加購日</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="tabs" id="tabs"></nav>
+
+    <section id="overview" class="panel active">
+      <div class="card timeline">
+        <details open>
+          <summary>D1｜桃園 → 宿霧｜市區觀光＋海洋公園</summary>
+          <div class="meta">航班 BR281 08:00 TPE → 10:50 CEB</div>
+          <ul>
+            <li>聖派特羅堡、麥哲倫十字架、聖嬰大教堂</li>
+            <li>宿霧海洋公園（海底隧道、海洋生物區）</li>
+            <li>SM Seaside 購物中心自由活動</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>D2｜歐斯陸鯨鯊共游（長途日）</summary>
+          <div class="meta">單程車程約 3.5 小時，通常凌晨出發</div>
+          <ul>
+            <li>重點體驗：鯨鯊共游＋歐斯陸市區觀光</li>
+            <li>天候不佳有替代行程與退費規則</li>
+            <li>建議自備暈車藥、防曬、防水袋</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>D3｜自由活動／可加購：墨寶一日遊</summary>
+          <div class="meta">沙丁魚風暴、浮潛、海龜保護區（依海況）</div>
+          <ul>
+            <li>可台灣先加購，6 人以上成行</li>
+            <li>偏戶外玩水日，建議穿防滑鞋</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>D4｜自由活動／可加購：薄荷島一日遊</summary>
+          <div class="meta">船程單程約 2.5 小時</div>
+          <ul>
+            <li>竹筏餐、原住民表演、眼鏡猴、巧克力山</li>
+            <li>懷孕旅客有登船條件限制</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>D5｜宿霧 → 桃園</summary>
+          <div class="meta">航班 BR282 12:15 CEB → 15:10 TPE</div>
+          <ul>
+            <li>早餐後整理行李，返程回台</li>
+          </ul>
+        </details>
+      </div>
+      <div class="callout">小提醒：行程順序與住宿名單以行前說明會及當地導遊安排為準。</div>
+    </section>
+
+    <section id="spots" class="panel">
+      <div class="grid">
+        <article class="card">
+          <div class="tag">海洋體驗</div>
+          <h3>歐斯陸鯨鯊共游</h3>
+          <p class="rating">★★★★☆ 4.8</p>
+          <p>近距離觀察鯨鯊的經典行程，需配合現場秩序與生態規範。</p>
+          <p><strong>小貼士：</strong>暈車藥請提早 30 分鐘服用，防曬衣＋防水手機袋必備。</p>
+        </article>
+
+        <article class="card">
+          <div class="tag">城市文化</div>
+          <h3>聖派特羅堡・麥哲倫十字架・聖嬰大教堂</h3>
+          <p class="rating">★★★★☆ 4.2</p>
+          <p>宿霧代表性歷史文化路線，可快速認識城市背景。</p>
+          <p><strong>小貼士：</strong>教堂服裝規定較嚴格，避免無袖、短褲、拖鞋。</p>
+        </article>
+
+        <article class="card">
+          <div class="tag">親子友善</div>
+          <h3>宿霧海洋公園 Cebu Ocean Park</h3>
+          <p class="rating">★★★★☆ 4.4</p>
+          <p>海底隧道、淡水叢林、天空魟魚花園等多區域可逛。</p>
+          <p><strong>小貼士：</strong>園區禁帶外食與瓶裝水，建議自備水壺。</p>
+        </article>
+
+        <article class="card">
+          <div class="tag">加購熱門</div>
+          <h3>薄荷島一日遊</h3>
+          <p class="rating">★★★★☆ 4.6</p>
+          <p>眼鏡猴、巧克力山與漂流竹筏餐，照片產量高。</p>
+          <p><strong>小貼士：</strong>海況變動大，保留彈性心態與備案安排。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="food" class="panel">
+      <div class="grid">
+        <article class="card">
+          <h3>韓式烤肉吃到飽（D1 午）</h3>
+          <p>剛抵達後補能量很適合，份量足，適合團體用餐。</p>
+        </article>
+        <article class="card">
+          <h3>歐斯陸菲式風味餐（D2 午）</h3>
+          <p>長途移動日的主餐補給，口味偏重、米飯為主。</p>
+        </article>
+        <article class="card">
+          <h3>自由餐建議：SM Seaside</h3>
+          <p>可安排連鎖品牌＋在地小吃混搭，彈性高。</p>
+        </article>
+        <article class="card">
+          <h3>自費日午餐（視加購行程）</h3>
+          <p>墨寶或薄荷島多為當地風味餐，口味可先跟導遊確認。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="transport" class="panel">
+      <div class="card">
+        <h3>實用資訊</h3>
+        <ul>
+          <li><strong>交通：</strong>台北直飛宿霧（長榮 BR281/282），當地以遊覽車接駁。</li>
+          <li><strong>住宿：</strong>D1–D4 宿霧市區同級飯店連住（如 Bayfront / Mandarin Plaza / Mezzo 等）。</li>
+          <li><strong>預算：</strong>團費外建議預留餐食、自費行程、小費與伴手禮；抓 <strong>NT$8,000–15,000</strong> 較安心。</li>
+          <li><strong>必備：</strong>護照、薄外套、防曬、防蚊、暈車藥、防水袋、現金小鈔。</li>
+        </ul>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps?q=Oslob%20Cebu&output=embed"
+          title="歐斯陸地圖"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const tabs=[['overview','行程總覽'],['spots','景點'],['food','美食'],['transport','交通']];
+    const tabsEl=document.getElementById('tabs');
+    const panels=[...document.querySelectorAll('.panel')];
+    tabs.forEach(([id,label],i)=>{
+      const b=document.createElement('button');
+      b.className='tab'+(i===0?' active':'');
+      b.textContent=label;
+      b.onclick=()=>{
+        document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        panels.forEach(p=>p.classList.toggle('active',p.id===id));
+        window.scrollTo({top:0,behavior:'smooth'});
+      };
+      tabsEl.appendChild(b);
+    });
+  </script>
+</body>
+</html>
