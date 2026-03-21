@@ -12,14 +12,14 @@
     * { box-sizing:border-box; }
     body { margin:0; font:16px/1.7 "Noto Sans TC","Inter","Segoe UI",sans-serif; color:var(--ink); background:var(--cream); }
     .hero {
-      min-height:46vh; padding:56px 20px; color:#fff;
-      background:linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.28)),
+      min-height:48vh; padding:56px 20px; color:#fff;
+      background:linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.30)),
       url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
       display:flex; align-items:flex-end;
     }
     .hero h1 { font-family:"Nunito","Noto Sans TC","Segoe UI",sans-serif; font-size:clamp(30px,5vw,54px); margin:0 0 8px; }
     .hero p { margin:0; font-size:18px; opacity:.95; }
-    .container { max-width:1120px; margin:26px auto 56px; padding:0 16px; }
+    .container { max-width:1140px; margin:26px auto 56px; padding:0 16px; }
     .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 24px; }
     .tab { border:0; border-radius:999px; padding:10px 16px; background:#e5edf5; cursor:pointer; font-weight:600; }
     .tab.active { background:var(--sky); color:#fff; }
@@ -27,6 +27,7 @@
     .panel.active { display:block; }
     .card { background:var(--card); border-radius:16px; padding:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); margin-bottom:14px; }
     .grid { display:grid; gap:14px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .grid-3 { display:grid; gap:14px; grid-template-columns:repeat(3,minmax(0,1fr)); }
     .timeline { border-left:3px solid var(--sky); margin-left:8px; padding-left:14px; }
     details { margin-bottom:10px; border:1px solid #e5e7eb; border-radius:12px; padding:10px 12px; }
     details summary { cursor:pointer; font-weight:700; }
@@ -34,17 +35,22 @@
     .rating { color:#f59e0b; font-weight:700; }
     .tag { display:inline-block; border-radius:999px; background:#eef8f2; color:var(--forest); padding:4px 10px; font-size:12px; margin-right:6px; }
     .callout { border-left:4px solid var(--coral); background:#fff7f2; border-radius:10px; padding:10px 12px; margin:10px 0; }
-    .map { border:2px dashed #cbd5e1; border-radius:16px; background:#fff; overflow:hidden; min-height:220px; }
-    .map iframe { width:100%; min-height:220px; border:0; }
+    .map { border:2px dashed #cbd5e1; border-radius:16px; background:#fff; overflow:hidden; min-height:240px; }
+    .map iframe { width:100%; min-height:240px; border:0; }
+    .photo { border-radius:14px; overflow:hidden; background:#f4f4f4; }
+    .photo img { width:100%; height:220px; object-fit:cover; display:block; }
+    .photo p { margin:8px 10px 12px; color:var(--muted); font-size:13px; }
+    .sources { font-size:13px; color:var(--muted); line-height:1.5; }
+    .sources a { color:#2563eb; text-decoration:none; }
     ul { margin:8px 0 0 18px; }
-    @media (max-width:900px){ .grid { grid-template-columns:1fr; } }
+    @media (max-width:980px){ .grid,.grid-3 { grid-template-columns:1fr; } .photo img { height:200px; } }
   </style>
 </head>
 <body>
   <header class="hero">
     <div>
       <h1>宿霧 5 天海洋探索</h1>
-      <p>鯨鯊共游 × 海洋公園 × 市區文化 × 自由加購日</p>
+      <p>鯨鯊共游 × 海洋公園 × 市區文化 × 美食地圖 × 自由加購日</p>
     </div>
   </header>
 
@@ -68,8 +74,8 @@
           <div class="meta">單程車程約 3.5 小時，通常凌晨出發</div>
           <ul>
             <li>重點體驗：鯨鯊共游＋歐斯陸市區觀光</li>
-            <li>天候不佳有替代行程與退費規則</li>
-            <li>建議自備暈車藥、防曬、防水袋</li>
+            <li>可能因天候改替代行程（SM Seaside + 午餐）</li>
+            <li>建議自備暈車藥、防曬衣、防水袋與替換衣物</li>
           </ul>
         </details>
 
@@ -78,7 +84,7 @@
           <div class="meta">沙丁魚風暴、浮潛、海龜保護區（依海況）</div>
           <ul>
             <li>可台灣先加購，6 人以上成行</li>
-            <li>偏戶外玩水日，建議穿防滑鞋</li>
+            <li>偏戶外玩水日，建議穿防滑鞋或溯溪鞋</li>
           </ul>
         </details>
 
@@ -87,7 +93,7 @@
           <div class="meta">船程單程約 2.5 小時</div>
           <ul>
             <li>竹筏餐、原住民表演、眼鏡猴、巧克力山</li>
-            <li>懷孕旅客有登船條件限制</li>
+            <li>孕婦旅客有登船條件限制（需依現場規範）</li>
           </ul>
         </details>
 
@@ -99,7 +105,26 @@
           </ul>
         </details>
       </div>
-      <div class="callout">小提醒：行程順序與住宿名單以行前說明會及當地導遊安排為準。</div>
+
+      <div class="card">
+        <h3>旅程亮點照片</h3>
+        <div class="grid-3">
+          <figure class="photo">
+            <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&fit=crop&w=1200&q=80" alt="宿霧海景" />
+            <p>宿霧海岸與湛藍海色（示意）</p>
+          </figure>
+          <figure class="photo">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80" alt="浮潛活動" />
+            <p>海上活動與浮潛體驗（示意）</p>
+          </figure>
+          <figure class="photo">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="旅遊景點" />
+            <p>自然景觀與戶外探索（示意）</p>
+          </figure>
+        </div>
+      </div>
+
+      <div class="callout">小提醒：行程順序、住宿名單、活動可行性仍以行前說明會與當地導遊安排為準。</div>
     </section>
 
     <section id="spots" class="panel">
@@ -108,8 +133,8 @@
           <div class="tag">海洋體驗</div>
           <h3>歐斯陸鯨鯊共游</h3>
           <p class="rating">★★★★☆ 4.8</p>
-          <p>近距離觀察鯨鯊的經典行程，需配合現場秩序與生態規範。</p>
-          <p><strong>小貼士：</strong>暈車藥請提早 30 分鐘服用，防曬衣＋防水手機袋必備。</p>
+          <p>近距離觀察鯨鯊的經典行程，需配合當地生態規範。</p>
+          <p><strong>小貼士：</strong>避免觸碰鯨鯊、避免使用閃光燈、遵守現場距離規範。</p>
         </article>
 
         <article class="card">
@@ -141,31 +166,35 @@
     <section id="food" class="panel">
       <div class="grid">
         <article class="card">
-          <h3>韓式烤肉吃到飽（D1 午）</h3>
-          <p>剛抵達後補能量很適合，份量足，適合團體用餐。</p>
+          <h3>宿霧 Lechon（烤乳豬）</h3>
+          <p>宿霧招牌必吃，外皮香脆、肉質濕潤，常被視為 Cebu 美食代表。</p>
+          <p><strong>建議：</strong>可搭配醋或微辣醬，晚上熱門店需排隊。</p>
         </article>
         <article class="card">
-          <h3>歐斯陸菲式風味餐（D2 午）</h3>
-          <p>長途移動日的主餐補給，口味偏重、米飯為主。</p>
+          <h3>Puso（椰葉包飯）</h3>
+          <p>當地常見「掛飯」，適合搭配烤肉、海鮮、炸物，方便外帶。</p>
+          <p><strong>建議：</strong>街邊攤常見，1~2 顆先試口感。</p>
         </article>
         <article class="card">
-          <h3>自由餐建議：SM Seaside</h3>
-          <p>可安排連鎖品牌＋在地小吃混搭，彈性高。</p>
+          <h3>Sutukil 海鮮吃法</h3>
+          <p>Su（烤）Tu（煮）Kil（生醃）三種做法一次體驗，適合多人共享。</p>
+          <p><strong>建議：</strong>先確認秤重與料理費，避免結帳落差。</p>
         </article>
         <article class="card">
-          <h3>自費日午餐（視加購行程）</h3>
-          <p>墨寶或薄荷島多為當地風味餐，口味可先跟導遊確認。</p>
+          <h3>SM Seaside 自由晚餐</h3>
+          <p>連鎖品牌＋在地店家選擇多，適合行程第一晚輕鬆補給。</p>
         </article>
       </div>
     </section>
 
     <section id="transport" class="panel">
       <div class="card">
-        <h3>實用資訊</h3>
+        <h3>實用資訊（更新版）</h3>
         <ul>
           <li><strong>交通：</strong>台北直飛宿霧（長榮 BR281/282），當地以遊覽車接駁。</li>
           <li><strong>住宿：</strong>D1–D4 宿霧市區同級飯店連住（如 Bayfront / Mandarin Plaza / Mezzo 等）。</li>
-          <li><strong>預算：</strong>團費外建議預留餐食、自費行程、小費與伴手禮；抓 <strong>NT$8,000–15,000</strong> 較安心。</li>
+          <li><strong>預算：</strong>依旅遊型態差異大；中階玩法抓每日約 <strong>NT$2,500–5,500</strong>（含餐食/交通/活動）較常見。</li>
+          <li><strong>鯨鯊活動注意：</strong>避免觸碰、避免閃燈、遵守簡報規範與安全距離。</li>
           <li><strong>必備：</strong>護照、薄外套、防曬、防蚊、暈車藥、防水袋、現金小鈔。</li>
         </ul>
       </div>
@@ -175,6 +204,25 @@
           title="歐斯陸地圖"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="card sources">
+        <h3>資料與圖片來源</h3>
+        <ul>
+          <li>可樂旅遊行程頁（你提供的團號頁面）</li>
+          <li>Oslob 鯨鯊規範整理（多來源彙整）：
+            <a href="https://www.oslobwhalesharks.com/guide/" target="_blank" rel="noopener">oslobwhalesharks.com</a>
+          </li>
+          <li>宿霧美食（Lechon / Puso / Sutukil）背景資料：
+            <a href="https://www.unileverfoodsolutions.com.ph/free-courses-academy/menu-planning/cebu-food.html" target="_blank" rel="noopener">unileverfoodsolutions.com.ph</a>
+          </li>
+          <li>預算區間參考：
+            <a href="https://roammate.com/budget/cebu/" target="_blank" rel="noopener">roammate.com</a>
+          </li>
+          <li>照片：Unsplash 免費圖庫（遵循其授權）：
+            <a href="https://unsplash.com/s/photos/cebu" target="_blank" rel="noopener">unsplash.com/s/photos/cebu</a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
