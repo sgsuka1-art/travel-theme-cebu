@@ -28,12 +28,10 @@
     .day-photo { margin-top:10px; border-radius:12px; overflow:hidden; }
     .day-photo img { width:100%; height:220px; object-fit:cover; display:block; }
     .day-photo figcaption { font-size:13px; color:var(--muted); padding:8px 10px; background:#fff; }
-    .card-thumb { border-radius:12px; overflow:hidden; margin:-4px -4px 10px; }
-    .card-thumb img { width:100%; height:180px; object-fit:cover; display:block; }
+    .card-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:0 0 10px; }
+    .card-gallery img { width:100%; height:95px; object-fit:cover; border-radius:10px; display:block; }
     .map { border:2px dashed #cbd5e1; border-radius:16px; background:#fff; overflow:hidden; min-height:240px; }
     .map iframe { width:100%; min-height:240px; border:0; }
-    .section-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:14px; }
-    .section-gallery img { width:100%; height:160px; object-fit:cover; border-radius:12px; display:block; }
     .tool { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
     .btn { display:inline-block; text-decoration:none; background:var(--sky); color:#fff; padding:8px 12px; border-radius:10px; font-weight:700; }
     .sources { font-size:13px; color:var(--muted); }
@@ -93,49 +91,83 @@
     </section>
 
     <section id="spots" class="panel">
-      <div class="section-gallery">
-        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80" alt="宿霧海景照片1">
-        <img src="https://images.unsplash.com/photo-1565689478170-49f2b1743c57?auto=format&fit=crop&w=1200&q=80" alt="宿霧海景照片2">
-        <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1200&q=80" alt="宿霧海景照片3">
-      </div>
       <div class="grid">
-        <article class="card"><div class="card-thumb"><img src="https://images.unsplash.com/photo-1565689478170-49f2b1743c57?auto=format&fit=crop&w=1200&q=80" alt="歐斯陸鯨鯊共游示意圖"></div><div class="tag">海洋體驗</div><h3>歐斯陸鯨鯊共游</h3><p class="rating">★★★★☆</p><p>宿霧指標體驗，請嚴格遵守生態規範。</p></article>
-        <article class="card"><div class="card-thumb"><img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1200&q=80" alt="宿霧歷史文化建築示意圖"></div><div class="tag">文化地標</div><h3>聖派特羅堡・麥哲倫十字架</h3><p class="rating">★★★★☆</p><p>快速認識宿霧歷史脈絡的經典路線。</p></article>
-        <article class="card"><div class="card-thumb"><img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1200&q=80" alt="海洋公園水族展示示意圖"></div><div class="tag">親子友善</div><h3>Cebu Ocean Park</h3><p class="rating">★★★★☆</p><p>海底隧道與生物展示區，雨天也能玩。</p></article>
-        <article class="card"><div class="card-thumb"><img src="https://images.unsplash.com/photo-1544989164-31d8c6459879?auto=format&fit=crop&w=1200&q=80" alt="薄荷島自然景觀示意圖"></div><div class="tag">加購熱門</div><h3>薄荷島一日遊</h3><p class="rating">★★★★☆</p><p>熱門拍照點多，適合家庭與情侶。</p></article>
+        <article class="card">
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1565689478170-49f2b1743c57?auto=format&fit=crop&w=900&q=80" alt="歐斯陸海洋照片1">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" alt="歐斯陸海洋照片2">
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" alt="歐斯陸海洋照片3">
+          </div>
+          <div class="tag">海洋體驗</div><h3>歐斯陸鯨鯊共游</h3><p class="rating">★★★★☆</p><p>宿霧指標體驗，請嚴格遵守生態規範。</p>
+        </article>
+        <article class="card">
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80" alt="歷史建築照片1">
+            <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=900&q=80" alt="歷史建築照片2">
+            <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80" alt="歷史建築照片3">
+          </div>
+          <div class="tag">文化地標</div><h3>聖派特羅堡・麥哲倫十字架</h3><p class="rating">★★★★☆</p><p>快速認識宿霧歷史脈絡的經典路線。</p>
+        </article>
+        <article class="card">
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=900&q=80" alt="海洋公園照片1">
+            <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=900&q=80" alt="海洋公園照片2">
+            <img src="https://images.unsplash.com/photo-1570475735025-6cd6aac9f0d7?auto=format&fit=crop&w=900&q=80" alt="海洋公園照片3">
+          </div>
+          <div class="tag">親子友善</div><h3>Cebu Ocean Park</h3><p class="rating">★★★★☆</p><p>海底隧道與生物展示區，雨天也能玩。</p>
+        </article>
+        <article class="card">
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1544989164-31d8c6459879?auto=format&fit=crop&w=900&q=80" alt="薄荷島照片1">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="薄荷島照片2">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="薄荷島照片3">
+          </div>
+          <div class="tag">加購熱門</div><h3>薄荷島一日遊</h3><p class="rating">★★★★☆</p><p>熱門拍照點多，適合家庭與情侶。</p>
+        </article>
       </div>
     </section>
 
     <section id="food" class="panel">
-      <div class="section-gallery">
-        <img src="https://images.unsplash.com/photo-1529692236671-f1dc8f076f95?auto=format&fit=crop&w=1200&q=80" alt="宿霧美食照片1">
-        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="宿霧美食照片2">
-        <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1200&q=80" alt="宿霧美食照片3">
-      </div>
       <div class="grid">
         <article class="card">
-          <div class="card-thumb"><img src="https://images.unsplash.com/photo-1630913859590-03fb0d5b94d8?auto=format&fit=crop&w=1200&q=80" alt="烤乳豬 Lechon 示意圖"></div>
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1630913859590-03fb0d5b94d8?auto=format&fit=crop&w=900&q=80" alt="Lechon照片1">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1dc8f076f95?auto=format&fit=crop&w=900&q=80" alt="Lechon照片2">
+            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=900&q=80" alt="Lechon照片3">
+          </div>
           <h3>House of Lechon（宿霧市）</h3>
           <p><strong>推薦：</strong>Lechon（烤乳豬）</p>
           <p><strong>評價參考：</strong>Michelin Guide 收錄（非星級）</p>
           <p class="meta">建議晚餐尖峰前先到，熱門時段常排隊。</p>
         </article>
         <article class="card">
-          <div class="card-thumb"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="海鮮餐廳與夕陽景觀示意圖"></div>
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80" alt="Lantaw照片1">
+            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80" alt="Lantaw照片2">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80" alt="Lantaw照片3">
+          </div>
           <h3>Lantaw Native Restaurant（Cordova/SRP）</h3>
           <p><strong>推薦：</strong>海鮮與菲式料理、夕陽景觀</p>
           <p><strong>評價參考：</strong>多平台整體正向（景觀與氛圍高分）</p>
           <p class="meta">適合安排 D1 或 D4 晚餐，拍照效果好。</p>
         </article>
         <article class="card">
-          <div class="card-thumb"><img src="https://images.unsplash.com/photo-1604908177225-6f2f9a69643c?auto=format&fit=crop&w=1200&q=80" alt="香料烤肉示意圖"></div>
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1604908177225-6f2f9a69643c?auto=format&fit=crop&w=900&q=80" alt="Rico照片1">
+            <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=80" alt="Rico照片2">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Rico照片3">
+          </div>
           <h3>Rico's Lechon</h3>
           <p><strong>推薦：</strong>Spicy Lechon</p>
           <p><strong>評價參考：</strong>口味評價兩極，建議現場挑選部位</p>
           <p class="meta">可與 House of Lechon 擇一比較。</p>
         </article>
         <article class="card">
-          <div class="card-thumb"><img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1200&q=80" alt="在地海鮮餐盤示意圖"></div>
+          <div class="card-gallery">
+            <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=900&q=80" alt="STK海鮮照片1">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="STK海鮮照片2">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=900&q=80" alt="STK海鮮照片3">
+          </div>
           <h3>STK ta Bay! Sa Paolito's Seafood House</h3>
           <p><strong>推薦：</strong>在地海鮮、古宅氛圍</p>
           <p><strong>評價參考：</strong>Trip.com 約 4.1/5（平台資料會變動）</p>
