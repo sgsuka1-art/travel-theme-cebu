@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>宿霧 5 天海洋探索｜旅行主題</title>
   <style>
-    :root { --sky:#6FB6E9; --coral:#FF7F50; --cream:#FAF6EF; --forest:#2F6B4F; --ink:#1F2937; --muted:#6B7280; --card:#FFFFFF; }
+    :root { --sky:#2A7FB8; --coral:#FF7A45; --cream:#F6F3EC; --forest:#1E5A45; --ink:#0F172A; --muted:#5B6472; --card:#FFFFFF; --gold:#D4A017; --navy:#0B3556; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; font:16px/1.75 "Noto Sans TC","Inter","Segoe UI",sans-serif; color:var(--ink); background:var(--cream); }
+    body { margin:0; font:16px/1.75 "Noto Sans TC","Inter","Segoe UI",sans-serif; color:var(--ink); background:radial-gradient(circle at 20% -20%, #ffffff, var(--cream) 42%); }
     .skip-link { position:absolute; left:-999px; top:8px; background:#111827; color:#fff; padding:8px 12px; border-radius:8px; z-index:1000; }
     .skip-link:focus { left:8px; }
-    .hero { min-height:52vh; padding:56px 20px; color:#fff; background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.3)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat; display:flex; align-items:flex-end; }
-    .hero h1 { font-family:"Nunito","Noto Sans TC","Segoe UI",sans-serif; font-size:clamp(30px,5vw,54px); margin:0 0 8px; }
+    .hero { min-height:56vh; padding:64px 20px; color:#fff; background:linear-gradient(110deg, rgba(11,53,86,.76), rgba(15,23,42,.52)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat; display:flex; align-items:flex-end; }
+    .hero h1 { font-family:"Nunito","Noto Sans TC","Segoe UI",sans-serif; font-size:clamp(32px,5vw,56px); margin:0 0 8px; letter-spacing:.01em; }
     .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    .quick-btn { display:inline-block; text-decoration:none; background:rgba(255,255,255,.92); color:#0f172a; padding:8px 14px; border-radius:999px; font-weight:700; }
-    .quick-btn.secondary { background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.55); }
+    .quick-btn { display:inline-block; text-decoration:none; background:linear-gradient(135deg,#fff,#f8fafc); color:#0f172a; padding:10px 16px; border-radius:999px; font-weight:700; box-shadow:0 6px 20px rgba(15,23,42,.18); }
+    .quick-btn.secondary { background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.65); }
     .container { max-width:1160px; margin:26px auto 56px; padding:0 16px; }
     .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:0 0 16px; }
-    .stats .card { margin:0; text-align:center; padding:14px; }
+    .stats .card { margin:0; text-align:center; padding:14px; border:1px solid #e6ecf2; background:linear-gradient(180deg,#ffffff,#fbfdff); }
     .stats b { display:block; font-size:22px; line-height:1.1; }
-    .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 24px; position:sticky; top:0; z-index:20; background:var(--cream); padding:8px 0 10px; }
+    .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 24px; position:sticky; top:0; z-index:20; background:rgba(246,243,236,.92); backdrop-filter:blur(8px); padding:10px 0 12px; border-bottom:1px solid #e8edf2; }
     .tab { border:0; border-radius:999px; padding:10px 16px; background:#e5edf5; cursor:pointer; font-weight:600; }
-    .tab.active { background:var(--sky); color:#fff; }
+    .tab.active { background:linear-gradient(135deg,var(--sky),var(--navy)); color:#fff; box-shadow:0 8px 18px rgba(42,127,184,.28); }
     .panel { display:none; }
     .panel.active { display:block; }
-    .card { background:var(--card); border-radius:16px; padding:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); margin-bottom:14px; }
+    .card { background:var(--card); border-radius:18px; padding:18px; box-shadow:0 10px 26px rgba(15,23,42,.09); margin-bottom:16px; border:1px solid #edf1f5; }
     .grid { display:grid; gap:14px; grid-template-columns:repeat(2,minmax(0,1fr)); }
     .timeline { border-left:3px solid var(--sky); margin-left:8px; padding-left:14px; }
     details { margin-bottom:10px; border:1px solid #e5e7eb; border-radius:12px; padding:10px 12px; }
@@ -33,7 +33,7 @@
     .meta { color:var(--muted); font-size:14px; margin-top:2px; }
     .rating { color:#f59e0b; font-weight:700; }
     .tag { display:inline-block; border-radius:999px; background:#eef8f2; color:var(--forest); padding:4px 10px; font-size:12px; margin-right:6px; }
-    .callout { border-left:4px solid var(--coral); background:#fff7f2; border-radius:10px; padding:10px 12px; margin:10px 0; }
+    .callout { border-left:4px solid var(--gold); background:linear-gradient(90deg,#fff8e8,#fffdf6); border-radius:12px; padding:12px 14px; margin:12px 0; }
     .day-photo { margin-top:10px; border-radius:12px; overflow:hidden; }
     .day-photo img { width:100%; height:220px; object-fit:cover; display:block; }
     .day-photo figcaption { font-size:13px; color:var(--muted); padding:8px 10px; background:#fff; }
@@ -110,7 +110,7 @@
           <figure class="day-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80" alt="返程航班"><figcaption>D5 經典：返程飛行日</figcaption></figure>
         </details>
       </div>
-      <div class="callout">行程順序與住宿仍以行前說明會及當地導遊安排為準。</div>
+      <div class="callout"><strong>升級建議：</strong>先鎖定 D2 鯨鯊名額與出發時間，再安排 D3/D4 加購行程，可大幅降低現場等待成本。</div>
     </section>
 
     <section id="spots" class="panel">
@@ -231,6 +231,15 @@
       <div class="map">
         <iframe src="https://www.google.com/maps?q=Oslob%20Cebu&output=embed" title="歐斯陸地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+
+<section class="card" aria-label="行前快速決策">
+        <h3>行前快速決策（轉換導向）</h3>
+        <p class="meta">先決定三件事：出發日期、是否加購薄荷島、D1 晚餐餐廳。你會省下大量臨場溝通時間。</p>
+        <div class="hero-actions" style="margin-top:10px;">
+          <a class="quick-btn" href="https://www.flightradar24.com/data/flights/br281" target="_blank" rel="noopener">先確認去程 BR281</a>
+          <a class="quick-btn secondary" href="https://www.flightradar24.com/data/flights/br282" target="_blank" rel="noopener">再確認回程 BR282</a>
+        </div>
+      </section>
 
       <div class="card sources">
         <h3>來源與備註</h3>
