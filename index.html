@@ -50,7 +50,16 @@
     .sticky-cta { position:fixed; right:16px; bottom:16px; z-index:40; display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
     .sticky-cta a { text-decoration:none; background:linear-gradient(135deg,var(--coral),#ff9a62); color:#fff; padding:10px 14px; border-radius:999px; font-weight:800; box-shadow:0 10px 24px rgba(255,122,69,.35); }
     .sticky-cta a.alt { background:linear-gradient(135deg,var(--sky),var(--navy)); box-shadow:0 10px 24px rgba(42,127,184,.35); }
-    @media (max-width:980px){ .grid,.tool,.stats{ grid-template-columns:1fr; } .day-photo img{ height:190px; } .hero{min-height:45vh;padding:42px 16px;} .hero h1{font-size:clamp(28px,8vw,40px);} .tab{padding:12px 14px;font-size:15px;} .sticky-cta{left:12px;right:12px;bottom:12px;} .sticky-cta a{flex:1;text-align:center;} }
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px;}
+    .price-card{background:#fff;border:1px solid #e7edf4;border-radius:14px;padding:14px;}
+    .price{font-size:28px;font-weight:800;color:var(--navy);}
+    .price-sub{font-size:13px;color:var(--muted);}
+    .contact-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+    .contact-row a{display:inline-block;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;}
+    .btn-line{background:#06c755;color:#fff;}
+    .btn-mail{background:#111827;color:#fff;}
+    .btn-form{background:#eef2ff;color:#1e3a8a;border:1px solid #c7d2fe;}
+    @media (max-width:980px){ .grid,.tool,.stats{ grid-template-columns:1fr; } .day-photo img{ height:190px; } .hero{min-height:45vh;padding:42px 16px;} .hero h1{font-size:clamp(28px,8vw,40px);} .tab{padding:12px 14px;font-size:15px;} .sticky-cta{left:12px;right:12px;bottom:12px;} .sticky-cta a{flex:1;text-align:center;} .pricing-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
@@ -231,6 +240,33 @@
         </ul>
       </div>
 
+      <div class="card" id="pricing">
+        <h3>方案與預算（V5 接單版）</h3>
+        <p class="meta">以下為示意價格，可依出發日、人數、飯店等級快速調整。</p>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h4>輕鬆玩</h4>
+            <div class="price">NT$24,900</div>
+            <div class="price-sub">機票＋住宿＋市區行程</div>
+          </article>
+          <article class="price-card">
+            <h4>海洋進階</h4>
+            <div class="price">NT$29,900</div>
+            <div class="price-sub">含鯨鯊共游／海洋活動</div>
+          </article>
+          <article class="price-card">
+            <h4>尊享客製</h4>
+            <div class="price">客製報價</div>
+            <div class="price-sub">小團包車＋餐廳指定＋彈性加購</div>
+          </article>
+        </div>
+        <div class="contact-row" aria-label="詢問方式">
+          <a class="btn-line" href="https://line.me" target="_blank" rel="noopener">Line 立即詢問</a>
+          <a class="btn-mail" href="mailto:travel@example.com?subject=宿霧5天行程詢問">Email 取得報價</a>
+          <a class="btn-form" href="#sources">填表單（可改成你的實際連結）</a>
+        </div>
+      </div>
+
       <div class="map">
         <iframe src="https://www.google.com/maps?q=Oslob%20Cebu&output=embed" title="歐斯陸地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -244,7 +280,7 @@
         </div>
       </section>
 
-      <div class="card sources">
+      <div class="card sources" id="sources">
         <h3>來源與備註</h3>
         <ul>
           <li>原始行程：可樂旅遊團體頁（你提供連結）</li>
@@ -265,7 +301,7 @@
 
   <div class="sticky-cta" aria-label="快速行動">
     <a href="#transport">立即查航班</a>
-    <a class="alt" href="#food">看美食行程</a>
+    <a class="alt" href="#pricing">看方案價格</a>
   </div>
 
   <script>
