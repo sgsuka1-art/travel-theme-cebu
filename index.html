@@ -47,7 +47,10 @@
     .sources a { color:#2563eb; text-decoration:none; }
     a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible { outline:3px solid #0ea5e9; outline-offset:2px; border-radius:8px; }
     @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} *{animation:none!important;transition:none!important;} }
-    @media (max-width:980px){ .grid,.tool,.stats{ grid-template-columns:1fr; } .day-photo img{ height:190px; } .hero{min-height:45vh;padding:42px 16px;} .hero h1{font-size:clamp(28px,8vw,40px);} .tab{padding:12px 14px;font-size:15px;} }
+    .sticky-cta { position:fixed; right:16px; bottom:16px; z-index:40; display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .sticky-cta a { text-decoration:none; background:linear-gradient(135deg,var(--coral),#ff9a62); color:#fff; padding:10px 14px; border-radius:999px; font-weight:800; box-shadow:0 10px 24px rgba(255,122,69,.35); }
+    .sticky-cta a.alt { background:linear-gradient(135deg,var(--sky),var(--navy)); box-shadow:0 10px 24px rgba(42,127,184,.35); }
+    @media (max-width:980px){ .grid,.tool,.stats{ grid-template-columns:1fr; } .day-photo img{ height:190px; } .hero{min-height:45vh;padding:42px 16px;} .hero h1{font-size:clamp(28px,8vw,40px);} .tab{padding:12px 14px;font-size:15px;} .sticky-cta{left:12px;right:12px;bottom:12px;} .sticky-cta a{flex:1;text-align:center;} }
   </style>
 </head>
 <body>
@@ -55,10 +58,10 @@
   <header class="hero">
     <div>
       <h1>宿霧 5 天海洋探索</h1>
-      <p>鯨鯊共游 × 海洋公園 × 市區文化 × 在地美食 × 航班追蹤</p>
+      <p>5 天 4 夜輕鬆跟團｜海洋體驗＋市區經典＋在地美食，一頁完成出發決策</p>
       <div class="hero-actions">
-        <a class="quick-btn" href="#overview">A 版 CTA：先看行程重點</a>
-        <a class="quick-btn secondary" href="#transport">B 版 CTA：先看交通＆航班</a>
+        <a class="quick-btn" href="#overview">立即看行程亮點</a>
+        <a class="quick-btn secondary" href="#transport">我要先確認航班</a>
       </div>
     </div>
   </header>
@@ -233,11 +236,11 @@
       </div>
 
 <section class="card" aria-label="行前快速決策">
-        <h3>行前快速決策（轉換導向）</h3>
-        <p class="meta">先決定三件事：出發日期、是否加購薄荷島、D1 晚餐餐廳。你會省下大量臨場溝通時間。</p>
+        <h3>立即出發決策（30 秒）</h3>
+        <p class="meta">只要先確認日期、加購項目與晚餐偏好，就能快速進入下訂/詢問流程。</p>
         <div class="hero-actions" style="margin-top:10px;">
-          <a class="quick-btn" href="https://www.flightradar24.com/data/flights/br281" target="_blank" rel="noopener">先確認去程 BR281</a>
-          <a class="quick-btn secondary" href="https://www.flightradar24.com/data/flights/br282" target="_blank" rel="noopener">再確認回程 BR282</a>
+          <a class="quick-btn" href="https://www.flightradar24.com/data/flights/br281" target="_blank" rel="noopener">查去程 BR281（我要出發）</a>
+          <a class="quick-btn secondary" href="https://www.flightradar24.com/data/flights/br282" target="_blank" rel="noopener">查回程 BR282（我想成團）</a>
         </div>
       </section>
 
@@ -259,6 +262,11 @@
       </div>
     </section>
   </main>
+
+  <div class="sticky-cta" aria-label="快速行動">
+    <a href="#transport">立即查航班</a>
+    <a class="alt" href="#food">看美食行程</a>
+  </div>
 
   <script>
     const tabs=[['overview','行程總覽'],['spots','景點'],['food','美食'],['transport','交通']];
